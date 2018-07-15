@@ -1,5 +1,43 @@
+:root {
+  --ratio: 1.333;
+  --base: 16px;
+  --light-grey: #666;
+  --primary-theme-color: #7572f7;
+  --secondary-theme-color: #fbb040;
+  --base-size: 1rem;
+  --low-base-size: calc(var(--base-size) / var(--ratio));
+  --ms1: calc(var(--base-size) * var(--ratio));
+  --ms2: calc(var(--ms1) * var(--ratio));
+  --ms3: calc(var(--ms2) * var(--ratio));
+  --ms4: calc(var(--ms3) * var(--ratio));
+  --ms5: calc(var(--ms4) * var(--ratio));
+  --ms6: calc(var(--ms5) * var(--ratio));
+  --ms7: calc(var(--ms6) * var(--ratio));
+
+
+  font-size: var(--base);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  background-attachment: fixed;
+  background-blend-mode: screen;
+  background-color: var(--secondary-theme-color);
+  background-image: url('./leaves-pattern.png');
+  color: var(--light-grey);
+  font-family: system-ui;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+
+  & img {
+    max-width: 100%;
+  }
+
+  & a {
+    color: var(--primary-theme-color);
+    text-decoration: none;
+  }
 }
