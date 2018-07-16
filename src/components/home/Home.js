@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import Button from '../shared/button/Button';
 
 import './Home.css';
-import profile from './profile1.jpg';
+import profile from './profile.png';
 
 export default class Home extends Component {
   render() {
@@ -27,20 +28,34 @@ export default class Home extends Component {
 
           <div>
             <h1>
-              I build software for the web
+              I
+              <span className="highlight"> build </span>
+              software for the <span className="highlight">web</span>
             </h1>
 
             <p>
               Hi there 👋🏾, my name is Chinedu Daniel. I’m a generalist developer
-              building specialty on the frontend. Welcome to my little space on
-              the web.
+              building a specialty on the frontend. Welcome to my little space
+              on the web.
             </p>
 
             <p>
               I'm currently with
-              <a href="https://andela.com">Andela</a> building
-              <a href="https://gobble.com">useful products</a> for humans.
+              <a href="https://andela.com" target="_blank">Andela</a> building
+              <a href="https://gobble.com" target="_blank">useful products</a>
+              for humans.
             </p>
+
+            <p>
+              I love the open source culture and during my free time, I try to
+              <a href="https://github.com/blueyedgeek" target="_blank">
+              give back</a> to the open source community.
+            </p>
+
+            <Button
+              href={'mailto:chinedudaniel7@gmail.com?subject=Hi+Chinedu'}
+              text='Say Hi'
+            />
           </div>
         </section>
       </header>

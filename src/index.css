@@ -1,6 +1,7 @@
 :root {
   --ratio: 1.333;
   --base: 16px;
+  --white: #fff;
   --light-grey: #666;
   --primary-theme-color: #7572f7;
   --secondary-theme-color: #fbb040;

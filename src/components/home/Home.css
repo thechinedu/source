@@ -12,6 +12,11 @@
     justify-content: center;
     margin: var(--low-base-size);
 
+    @media (width >= 768px) {
+      align-items: center;
+      justify-content: normal;
+    }
+
     & .logo {
       flex-basis: 100%;
       font-size: var(--ms2);
@@ -19,6 +24,14 @@
       margin-bottom: var(--low-base-size);
       text-align: center;
       transition-duration: 0.4s;
+
+      @media (width >= 375px) {
+        font-size: var(--ms3);
+      }
+
+      @media (width >= 768px) {
+        flex-basis: auto;
+      }
     }
 
     & .logo .firstname,  & .logo .fancy-dot {
@@ -45,6 +58,32 @@
   }
 
   & .about {
+    @media (width >= 768px) {
+      @supports(display: grid) {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: var(--ms2);
+        margin-top: var(--ms3);
+      }
+    }
+
+    & h1 {
+      margin: 0;
+
+      @media (width >= 768px) {
+        font-size: var(--ms4);
+      }
+
+      @media (width >= 979px) {
+        font-size: var(--ms5);
+      }
+
+      @media (width >= 1024px) {
+        font-size: var(--ms6);
+      }
+    }
+
     & a {
       border-bottom: 3px solid var(--primary-theme-color);
       display: inline-block;
@@ -56,18 +95,8 @@
       transform: scale(1.03);
     }
 
-    @media (width >= 768px) {
-      @supports(display: grid) {
-        align-items: center;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: var(--ms2);
-        margin-top: var(--ms3);
-      }
-
-      & h1 {
-        font-size: var(--ms4);
-      }
+    & .highlight {
+      color: var(--primary-theme-color);
     }
   }
 }
