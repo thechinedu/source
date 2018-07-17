@@ -3,6 +3,11 @@
   50% { transform: translateY(-30%) }
 }
 
+@keyframes waving-hand {
+  0%,100% { transform: rotate(-5deg)}
+  50% { transform: rotate(25deg) }
+}
+
 .header {
   padding: 1rem;
 
@@ -23,6 +28,7 @@
       margin-right: auto;
       margin-bottom: var(--low-base-size);
       text-align: center;
+      text-transform: none;
       transition-duration: 0.4s;
 
       @media (width >= 375px) {
@@ -50,6 +56,7 @@
       color: var(--light-grey);
       padding: 0 var(--low-base-size);
       text-decoration: none;
+      text-transform: uppercase;
     }
 
     & a:nth-of-type(2) {
@@ -82,6 +89,14 @@
       @media (width >= 1024px) {
         font-size: var(--ms6);
       }
+    }
+
+    & [aria-label="waving hand"] {
+      animation-name: waving-hand;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      display: inline-block;
+      padding-left: 0.238rem;
     }
 
     & a {

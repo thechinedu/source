@@ -6,8 +6,8 @@ import profile from './profile.png';
 
 export default class Home extends Component {
   render() {
-    return [
-      <header key="header" className="header">
+    return (
+      <header className="header">
         <nav className="navigation">
           <a href="/" className="logo">
             <span className="firstname">Chinedu</span>
@@ -16,11 +16,11 @@ export default class Home extends Component {
           </a>
 
           <a href="#">Writing</a>
-          <a href="#">Portfolio</a>
           <a href="#">Labs</a>
+          <a href="#">Tidbits</a>
         </nav>
 
-        <section className="about" key="about">
+        <section className="about">
           <img
             src={profile}
             alt="Profile"
@@ -34,9 +34,10 @@ export default class Home extends Component {
             </h1>
 
             <p>
-              Hi there 👋🏾, my name is Chinedu Daniel. I’m a generalist developer
-              building a specialty on the frontend. Welcome to my little space
-              on the web.
+              Hi there
+              <span role="img" aria-label="waving hand"> 👋🏾</span>, my name is
+              Chinedu Daniel. I’m a generalist developer building a specialty on
+              the frontend. Welcome to my little space on the web.
             </p>
 
             <p>
@@ -59,6 +60,6 @@ export default class Home extends Component {
           </div>
         </section>
       </header>
-    ];
+    );
   }
 }
