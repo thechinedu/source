@@ -1,0 +1,19 @@
+.writing {
+  & > img {
+    @media (width >= 768px) {
+      width: 530px;
+    }
+  }
+
+  & .intro__wrapper {
+    & > p {
+      @media (width >= 768px) {
+        width: 80%;
+      }
+    }
+  }
+
+  & .posts__container {
+    
+  }
+}

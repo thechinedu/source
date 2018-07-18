@@ -1,15 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link, Route } from 'react-router-dom';
 
-export default class Writing extends Component {
-  render() {
-    return [
-      <header key="writing--header">
-        header stuff goes here
-      </header>,
+import notepad from './notepad.svg';
 
-      <main key="writing--main">
-        Articles go here
-      </main>
-    ];
-  }
-}
+import './Writing.css'
+
+export default () => (
+  <section className="writing grid__container">
+    <img
+      src={notepad}
+      alt="Notepad"
+    />
+
+    <div className="intro__wrapper">
+      <h1>
+        <span className="highlight">Writing</span>
+      </h1>
+
+      <p>
+        Welcome to my writers' corner where I get to write about anything I want
+        (mostly technical articles but sometimes other thoughts).
+      </p>
+    </div>
+
+    <section className="posts__container">
+      <article className="post">
+        <h2 className="post-title">
+          Hello World 🌎
+          <div className="post-date">
+            18 July, 2018
+          </div>
+        </h2>
+      </article>
+    </section>
+  </section>
+);

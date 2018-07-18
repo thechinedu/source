@@ -3,5 +3,12 @@
   border: 0;
   border-radius: 0.238rem;
   color: var(--white);
+  display: block;
   padding: var(--base-size) var(--ms3);
+  text-align: center;
+
+  @media (width >= 768px) {
+    display: inline-block;
+    text-align: left;
+  }
 }

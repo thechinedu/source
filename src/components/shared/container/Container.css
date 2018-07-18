@@ -3,11 +3,6 @@
   50% { transform: translateY(-30%) }
 }
 
-@keyframes waving-hand {
-  0%,100% { transform: rotate(-5deg)}
-  50% { transform: rotate(25deg) }
-}
-
 .container {
   margin: var(--low-base-size);
   padding: 1rem;

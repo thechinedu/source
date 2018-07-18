@@ -1,50 +1,14 @@
-.about {
-  @media (width >= 768px) {
-    @supports(display: grid) {
-      align-items: center;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: var(--ms2);
-      margin-top: var(--ms3);
-    }
-  }
+@keyframes waving-hand {
+  0%,100% { transform: rotate(-5deg)}
+  50% { transform: rotate(25deg) }
+}
 
-  & h1 {
-    margin: 0;
-
-    @media (width >= 768px) {
-      font-size: var(--ms4);
-    }
-
-    @media (width >= 979px) {
-      font-size: var(--ms5);
-    }
-
-    @media (width >= 1024px) {
-      font-size: var(--ms6);
-    }
-  }
-
+.home {
   & [aria-label="waving hand"] {
     animation-name: waving-hand;
     animation-duration: 1s;
     animation-iteration-count: infinite;
     display: inline-block;
     padding-left: 0.238rem;
-  }
-
-  & a {
-    border-bottom: 3px solid var(--primary-theme-color);
-    display: inline-block;
-    margin: 0 0.178rem;
-    transition-duration: 0.4s;
-  }
-
-  & a:hover {
-    transform: scale(1.03);
-  }
-
-  & .highlight {
-    color: var(--primary-theme-color);
   }
 }
