@@ -1,0 +1,68 @@
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-30%) }
+}
+
+@keyframes waving-hand {
+  0%,100% { transform: rotate(-5deg)}
+  50% { transform: rotate(25deg) }
+}
+
+.container {
+  margin: var(--low-base-size);
+  padding: 1rem;
+
+  & .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (width >= 768px) {
+      align-items: center;
+      justify-content: normal;
+    }
+
+    & .logo {
+      flex-basis: 100%;
+      font-size: var(--ms2);
+      margin-right: auto;
+      margin-bottom: var(--low-base-size);
+      padding: 0;
+      text-align: center;
+      text-transform: none;
+      transition-duration: 0.4s;
+
+      @media (width >= 375px) {
+        font-size: var(--ms3);
+      }
+
+      @media (width >= 768px) {
+        flex-basis: auto;
+      }
+    }
+
+    & .logo .firstname,  & .logo .fancy-dot {
+      color: var(--primary-theme-color);
+    }
+
+    & .logo .fancy-dot {
+      animation-name: bounce;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      display: inline-block;
+      font-size: var(--ms4);
+    }
+
+    & a {
+      color: var(--light-grey);
+      padding: 0 var(--low-base-size);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    & a:nth-of-type(2) {
+      padding-left: 0;
+    }
+  }
+
+}
