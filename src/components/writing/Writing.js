@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import notepad from './notepad.svg';
 
@@ -7,6 +7,10 @@ import './Writing.css'
 
 export default () => (
   <section className="writing grid__container">
+    <Helmet>
+      <title>Writing - Chinedu Daniel - Full Stack Developer</title>
+    </Helmet>
+
     <img
       src={notepad}
       alt="Notepad"
@@ -26,7 +30,7 @@ export default () => (
     <section className="posts__container">
       <article className="post">
         <h2 className="post-title">
-          Hello World 🌎
+          Hello World
           <div className="post-date">
             18 July, 2018
           </div>

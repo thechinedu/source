@@ -1,4 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
+
 import Button from '../shared/button/Button';
 
 import './Home.css';
@@ -6,6 +8,10 @@ import profile from './profile.png';
 
 export default () => (
   <section className="home grid__container">
+    <Helmet>
+      <title>Chinedu Daniel - Full Stack Developer</title>
+    </Helmet>
+
     <img
       src={profile}
       alt="Profile"
