@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom';
 
 import Home from '../../home/Home';
 import Writing from '../../writing/Writing';
+import Post from '../../post/Post';
 
 import './Container.css';
 
@@ -26,6 +27,7 @@ export default () => (
     <div>
       <Route exact path="/" component={Home} />
       <Route path="/writing" component={Writing} />
+      <Route path="/posts/:year/:month/:date/:slug" component={Post} />
     </div>
   </section>
 );

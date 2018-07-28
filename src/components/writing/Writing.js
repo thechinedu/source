@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+
+import { posts } from '../../utils';
 
 import notepad from './notepad.svg';
 
@@ -28,14 +31,22 @@ export default () => (
     </div>
 
     <section className="posts__container">
-      <article className="post">
-        <h2 className="post-title">
-          Hello World
-          <div className="post-date">
-            18 July, 2018
-          </div>
-        </h2>
-      </article>
+      {posts.page(1).map(({url, title, date, summary}) => (
+        <a href={url} key={url}>
+          <article className="post">
+            <h2 className="post-title">
+              {title}
+              <div className="post-date">
+                {date}
+              </div>
+            </h2>
+
+            <main className="summary">
+              { summary }
+            </main>
+          </article>
+        </a>
+      ))}
     </section>
   </section>
 );
