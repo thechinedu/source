@@ -1,7 +1,7 @@
 #### Issue Type
 
-- [ ] Feature Request
 - [ ] Bug
+- [ ] Feature
 
 #### Description
 
