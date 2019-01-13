@@ -23,5 +23,10 @@
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-app-rewired eject",
     "postbuild": "react-snap"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.md$": "<rootDir>/__mocks__/markdownMock.js"
+    }
   }
 }

@@ -3,7 +3,7 @@ import PostResolver from './post-resolver';
 
 export const posts = {};
 
-posts.page = (n) => paginate(allPosts()).fetchPage({page: n, perPage: 10});
+posts.page = page => paginate({ posts: allPosts(), page });
 
 posts.find = (url) => allPosts().find(obj => obj.url === url);
 
