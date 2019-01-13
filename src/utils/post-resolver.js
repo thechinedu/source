@@ -1,7 +1,19 @@
 import { createElement } from 'react';
 import marksy from 'marksy';
 
-const compile = marksy({ createElement })
+const compile = marksy({ createElement });
+
+const prependToStr = (str, prependStr) => `${prependStr}${str}`;
+const replaceDashWithForwardSlash = str => (
+  str.replace(/\d+-/g, match => match.replace('-', '/'))
+);
+const removeFileExtension = (str, ext) => (
+  str.replace(new RegExp(`.${ext}$`), '')
+);
+const removeLeadingDotFromPath = str => {
+  if (str[0] === '.') return str.substr(1);
+  return str;
+};
 
 export default class PostResolver {
   constructor(filePath) {
@@ -11,10 +23,12 @@ export default class PostResolver {
   }
 
   url() {
-    return '/posts' + this.filePath.substr(1).replace(/\.md$/, '')
-      .replace(/\d-/g, match => (
-        match.replace('-', '/')
-      ));
+    let result = removeFileExtension(this.filePath, 'md');
+    result = removeLeadingDotFromPath(result);
+    result = replaceDashWithForwardSlash(result);
+    result = prependToStr(result, '/posts');
+
+    return result;
   }
 
   title() {
@@ -24,7 +38,7 @@ export default class PostResolver {
   date() {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug',
       'Sep', 'Oct', 'Nov', 'Dec'];
-    const [ year, mon, date ] = this.filePath.match(/\d+/g);
+    const [year, mon, date] = this.filePath.match(/\d+/g);
 
     return `${date} ${months[parseInt(mon, 10) - 1]}, ${year}`
   }
