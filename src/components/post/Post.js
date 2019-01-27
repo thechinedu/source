@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 
 import { posts } from '../../utils';
 
+import './Post.css';
+
 export default class Post extends Component {
   state = {
     post: null
@@ -23,16 +25,21 @@ export default class Post extends Component {
       <article className="post">
         <Helmet>
           <title>
-            { post.title } - Chinedu Daniel - Full Stack Developer
+            {post.title} - Chinedu Daniel - Full Stack Developer
           </title>
         </Helmet>
 
         <header>
-          <h1>{post.title}</h1>
+          <h1 className="post-title">
+            {post.title}
+            <div className="date">
+              Published on {post.date}
+            </div>
+          </h1>
         </header>
 
         <main>
-          { post.content }
+          {post.content}
         </main>
       </article>
     );

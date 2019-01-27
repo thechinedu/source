@@ -1,0 +1,21 @@
+.post {
+  margin: 0 auto;
+
+  @media (width >= 930px) {
+    width: 50%;
+  }
+
+  & .post-title {
+    color: var(--primary-theme-color);
+    font-size: var(--ms3);
+    text-align: center;
+
+    @media (width >= 768px) {
+      font-size: var(--ms4);
+    }
+
+    @media (width >= 1024px) {
+      font-size: var(--ms5);
+    }
+  }
+}

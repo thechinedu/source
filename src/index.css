@@ -144,3 +144,9 @@ body {
     font-size: var(--ms3);
   }
 }
+
+.date {
+  color: var(--light-grey);
+  font-size: var(--low-base-size);
+  opacity: 0.38;
+}

@@ -33,15 +33,32 @@ export default () => (
 
       <p>
         I'm currently with
-        <a href="https://andela.com" target="_blank">Andela</a> building
-        <a href="https://gobble.com" target="_blank">useful products</a>
+        <a
+          href="https://andela.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Andela
+        </a> building
+        <a
+          href="https://gobble.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          useful products
+        </a>
         for humans.
       </p>
 
       <p>
         I love the open source culture and during my free time, I try to
-        <a href="https://github.com/blueyedgeek" target="_blank">
-        give back</a> to the open source community.
+        <a
+          href="https://github.com/blueyedgeek"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          give back
+        </a> to the open source community.
       </p>
 
       <Button

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import { posts } from '../../utils';
@@ -34,10 +33,10 @@ export default () => (
     <section className="posts__container">
       {posts.page(1).map(({ url, title, date, summary }) => (
         <a href={url} key={url}>
-          <article className="post card">
-            <h2 className="post-title card-header">
+          <article className="card">
+            <h2 className="card-header">
               {title}
-              <div className="post-date">
+              <div className="date">
                 {date}
               </div>
             </h2>
