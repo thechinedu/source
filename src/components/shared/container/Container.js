@@ -4,6 +4,7 @@ import { Link, Route } from 'react-router-dom';
 import Home from '../../home/Home';
 import Writing from '../../writing/Writing';
 import Post from '../../post/Post';
+import Labs from '../../labs/Labs';
 
 import './Container.css';
 
@@ -20,13 +21,17 @@ export default () => (
         Writing
       </Link>
 
-      <a href="#">Labs</a>
+      <Link to="/labs">
+        Labs
+      </Link>
+
       <a href="#">Tidbits</a>
     </nav>
 
     <div>
       <Route exact path="/" component={Home} />
       <Route path="/writing" component={Writing} />
+      <Route path="/labs" component={Labs} />
       <Route path="/posts/:year/:month/:date/:slug" component={Post} />
     </div>
   </section>
