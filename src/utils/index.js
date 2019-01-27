@@ -5,7 +5,7 @@ export const posts = {};
 
 posts.page = page => paginate({ posts: allPosts(), page });
 
-posts.find = (url) => allPosts().find(obj => obj.url === url);
+posts.find = url => allPosts().find(obj => obj.url === url);
 
 const allPosts = () => {
   let posts = require.context('../posts', false, /\.md/).keys();

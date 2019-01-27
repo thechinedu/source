@@ -29,12 +29,6 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
-    & .post-date {
-      color: var(--light-grey);
-      font-size: var(--low-base-size);
-      opacity: 0.38;
-    }
-
     & .summary {
       color: var(--light-grey);
     }
