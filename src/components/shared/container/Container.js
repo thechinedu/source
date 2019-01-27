@@ -5,6 +5,7 @@ import Home from '../../home/Home';
 import Writing from '../../writing/Writing';
 import Post from '../../post/Post';
 import Labs from '../../labs/Labs';
+import Tidbits from '../../tidbits/Tidbits';
 
 import './Container.css';
 
@@ -25,13 +26,16 @@ export default () => (
         Labs
       </Link>
 
-      <a href="#">Tidbits</a>
+      <Link to="/tidbits">
+        Tidbits
+      </Link>
     </nav>
 
     <div>
       <Route exact path="/" component={Home} />
       <Route path="/writing" component={Writing} />
       <Route path="/labs" component={Labs} />
+      <Route path="/tidbits" component={Tidbits} />
       <Route path="/posts/:year/:month/:date/:slug" component={Post} />
     </div>
   </section>
