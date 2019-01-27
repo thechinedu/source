@@ -17,6 +17,7 @@ export default () => (
     <img
       src={notepad}
       alt="Notepad"
+      title="Icon made by Freepik from Flaticon"
     />
 
     <div className="intro__wrapper">
@@ -31,10 +32,10 @@ export default () => (
     </div>
 
     <section className="posts__container">
-      {posts.page(1).map(({url, title, date, summary}) => (
+      {posts.page(1).map(({ url, title, date, summary }) => (
         <a href={url} key={url}>
-          <article className="post">
-            <h2 className="post-title">
+          <article className="post card">
+            <h2 className="post-title card-header">
               {title}
               <div className="post-date">
                 {date}
@@ -42,7 +43,7 @@ export default () => (
             </h2>
 
             <main className="summary">
-              { summary }
+              {summary}
             </main>
           </article>
         </a>
