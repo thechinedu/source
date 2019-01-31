@@ -2,7 +2,6 @@ import React from 'react';
 import { hydrate, render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import registerServiceWorker from './registerServiceWorker';
 import Container from './components/shared/container/Container';
 
 import './index.css';
@@ -19,5 +18,3 @@ if (rootElement.hasChildNodes()) {
 } else {
   render(<App />, rootElement);
 }
-
-registerServiceWorker();
