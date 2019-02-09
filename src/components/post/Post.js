@@ -20,29 +20,28 @@ export default class Post extends Component {
 
   render() {
     const { post } = this.state;
+    debugger
 
     return (
       <article className="post">
-        {post && [
-          <Helmet key="helmet">
-            <title>
-              {post.title} - Chinedu Daniel - Full Stack Developer
-            </title>
-          </Helmet>,
+        <Helmet>
+          <title>
+            {post.title} - Chinedu Daniel - Full Stack Developer
+          </title>
+        </Helmet>
 
-          <header key="header">
-            <h1 className="post-title">
-              {post.title}
-              <div className="date">
-                Published on {post.date}
-              </div>
-            </h1>
-          </header>,
+        <header>
+          <h1 className="post-title">
+            {post.title}
+            <div className="date">
+              Published on {post.date}
+            </div>
+          </h1>
+        </header>
 
-          <main key="main">
-            {post.content}
-          </main>
-        ]}
+        <main>
+          {post.content}
+        </main>
       </article>
     );
   }
