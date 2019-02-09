@@ -23,24 +23,26 @@ export default class Post extends Component {
 
     return (
       <article className="post">
-        <Helmet>
-          <title>
-            {post.title} - Chinedu Daniel - Full Stack Developer
-          </title>
-        </Helmet>
+        {post && [
+          <Helmet key="helmet">
+            <title>
+              {post.title} - Chinedu Daniel - Full Stack Developer
+            </title>
+          </Helmet>,
 
-        <header>
-          <h1 className="post-title">
-            {post.title}
-            <div className="date">
-              Published on {post.date}
-            </div>
-          </h1>
-        </header>
+          <header key="header">
+            <h1 className="post-title">
+              {post.title}
+              <div className="date">
+                Published on {post.date}
+              </div>
+            </h1>
+          </header>,
 
-        <main>
-          {post.content}
-        </main>
+          <main key="main">
+            {post.content}
+          </main>
+        ]}
       </article>
     );
   }
