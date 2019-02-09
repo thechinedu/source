@@ -20,7 +20,6 @@ export default class Post extends Component {
 
   render() {
     const { post } = this.state;
-    debugger
 
     return (
       <article className="post">
