@@ -2,7 +2,7 @@
   margin: 0 auto;
 
   @media (width >= 930px) {
-    width: 50%;
+    width: 70%;
   }
 
   & .post-title {
@@ -17,5 +17,26 @@
     @media (width >= 1024px) {
       font-size: var(--ms5);
     }
+  }
+
+  & p {
+    font-size: 1.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  & code:not([class^=language]) {
+    background-color: var(--white);
+    color: var(--primary-theme-color);
+    padding: 0 0.3125rem;
+  }
+
+  & pre {
+    background-color: var(--code-snippet-bg);
+    border-left: 0.625rem solid var(--primary-theme-color);
+    color: var(--white);
+    padding: 1.25rem;
+    white-space: pre-wrap;
   }
 }
