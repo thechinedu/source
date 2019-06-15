@@ -5,6 +5,7 @@
   --light-grey: #666;
   --primary-theme-color: #7572f7;
   --secondary-theme-color: #fbb040;
+  --code-snippet-bg: #3f3f3f;
   --base-size: 1rem;
   --low-base-size: calc(var(--base-size) / var(--ratio));
   --ms1: calc(var(--base-size) * var(--ratio));
@@ -17,7 +18,7 @@
 
 
   font-size: var(--base);
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 * {
@@ -148,5 +149,6 @@ body {
 .date {
   color: var(--light-grey);
   font-size: var(--low-base-size);
+  margin-top: 0.625rem;
   opacity: 0.38;
 }

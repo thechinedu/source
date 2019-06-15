@@ -1,7 +1,15 @@
 import { createElement } from 'react';
+import 'highlight.js/styles/zenburn.css';
+import hljs from 'highlight.js/lib/highlight';
+import hljsJavascript from 'highlight.js/lib/languages/javascript';
 import marksy from 'marksy';
 
-const compile = marksy({ createElement });
+hljs.registerLanguage('javascript', hljsJavascript);
+
+const compile = marksy({
+  createElement,
+  highlight: (language, code) => hljs.highlight(language, code).value
+});
 
 const prependToStr = (str, prependStr) => `${prependStr}${str}`;
 const replaceDashWithForwardSlash = str => (
