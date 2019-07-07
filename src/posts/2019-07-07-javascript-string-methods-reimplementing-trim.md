@@ -36,9 +36,11 @@ Let’s start with the `trimLeft` function:
 ```js
 const trimLeft = str => {
  /*
-   The res variable is initialized to an empty string. This is the new string that we'll be returning.
+   The res variable is initialized to an empty string.
+   This is the new string that we'll be returning.
 
-   The shouldMergeChar boolean variable will be used to indicate when we can start building our new string.
+   The shouldMergeChar boolean variable will be used to indicate
+   when we can start building our new string.
  */
  let res = "";
  let shouldMergeChar = false;
@@ -50,20 +52,23 @@ const trimLeft = str => {
    let char = str[i];
 
    /*
-     The regex here checks to see if the current character is NOT a whitespace character.
+     The regex here checks to see if the current character
+     is NOT a whitespace character.
 
-     If that is the case, it sets the boolean variable shouldMergeChar to true
+     If that is the case, it sets the boolean variable
+     shouldMergeChar to true
    */
     if (char.match(/[^\s]/)) shouldMergeChar = true;
 
    /*
-     Once the first non-whitespace character has been encountered, we can
-     proceed with building our new string using the characters from the
-     given string
+     Once the first non-whitespace character has been
+     encountered, we can proceed with building our new
+     string using the characters from the given string
    */
     if (shouldMergeChar) res += char;
   }
 
+  /* This does what you think it shoud do */
   return res;
 };
 
@@ -88,7 +93,10 @@ const trimRight = str => {
   let res = "";
   let shouldMergeChar = false;
 
- /* Our humble for loop again but this time iterating from the end of the string */
+ /*
+    Our humble for loop again but this time iterating
+    from the end of the string
+  */
   for (let i = (str.length - 1); i >= 0; i -= 1) {
    /* store a reference to the current character in the string */
     let char = str[i];
@@ -100,9 +108,11 @@ const trimRight = str => {
     if (char.match(/[^\s]/)) shouldMergeChar = true;
 
    /*
-     Since we are looping from the back, we need a way to still build
-     the new string in the correct order. This does just that by adding
-     the characters to the beginning of our new string rather than at the end.
+     Since we are looping from the back, we need a way
+     to still build the new string in the correct order.
+
+     This does just that by adding the characters to the
+     beginning of our new string rather than at the end.
    */
     if (shouldMergeChar) res = char + res;
   }
@@ -129,4 +139,6 @@ What did I tell you? It’s that easy!
 
 ## Conclusion
 
-There are probably a dozen different ways to go about implementing `trim` but the concepts discussed in this article gives a very good frame of reference for how the trim method operates on a string.
+There are probably a dozen different ways to go about implementing `trim`
+but the concepts discussed in this article gives a very good frame of
+reference for how the trim method operates on a string.
