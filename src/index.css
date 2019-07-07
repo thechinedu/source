@@ -45,6 +45,12 @@ body {
   }
 }
 
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
 .grid__container {
   margin-top: var(--base-size);
 
@@ -76,6 +82,7 @@ body {
   }
 
   & h1 {
+    line-height: 1.15;
     margin: 0;
     text-align: center;
 
