@@ -12,25 +12,27 @@
       }
     }
   }
+}
 
-  & .posts__container {
-    text-align: center;
+.posts__container {
+  border-top: 2px dashed var(--primary-theme-color);
+  margin-top: var(--ms6);
 
-    @media (width >= 768px) {
-      @supports(display: grid) {
-        display: grid;
-        grid-column: 1 / span 2;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: var(--ms2);
-      }
-    }
+  & > h3 {
+    font-size: var(--ms4);
+    position: relative;
+  }
+    
+  & > h3::after {
+    content: "Posts";
+    left: 10%;
+    opacity: 0.03;
+    position: absolute;
+    top: -15%;
+    transform: scale(3.5);
+  }
 
-    @media (width >= 1024px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    & .summary {
-      color: var(--light-grey);
-    }
+  & a:last-of-type > .card {
+    border: 0;
   }
 }

@@ -2,12 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Button from '../shared/button/Button';
+import { posts } from '../../utils';
 
 import './Home.css';
 import profile from './profile.png';
 
-export default () => (
-  <section className="home grid__container">
+export default () => [
+  <section className="home grid__container" key="home">
     <Helmet>
       <title>Chinedu Daniel - Full Stack Developer</title>
     </Helmet>
@@ -34,14 +35,14 @@ export default () => (
       <p>
         I'm currently with
         <a
-          href="https://andela.com"
+          href="https://freighthub.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Andela
+          FreightHub
         </a> building
         <a
-          href="https://gobble.com"
+          href="https://ship.freighthub.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -66,5 +67,27 @@ export default () => (
         text='Say Hi'
       />
     </div>
+  </section>,
+
+  <section className="recent-posts" key="recent-posts">
+    <h3>
+      Recent Posts
+    </h3>
+    {posts.page(1).map(({ url, title, date, summary }) => (
+      <a href={url} key={url}>
+        <article className="card">
+          <h2 className="card-header">
+            {title}
+            <div className="date">
+              {date}
+            </div>
+          </h2>
+
+          <main className="summary">
+            {summary}
+          </main>
+        </article>
+      </a>
+    ))}
   </section>
-);
+];
