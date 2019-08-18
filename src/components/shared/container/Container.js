@@ -6,6 +6,7 @@ import Writing from '../../writing/Writing';
 import Post from '../../post/Post';
 import Labs from '../../labs/Labs';
 import Tidbits from '../../tidbits/Tidbits';
+import Footer from '../../footer/Footer';
 
 import './Container.css';
 
@@ -38,5 +39,7 @@ export default () => (
       <Route path="/tidbits" component={Tidbits} />
       <Route path="/posts/:year/:month/:date/:slug" component={Post} />
     </div>
+
+    <Footer />
   </section>
 );

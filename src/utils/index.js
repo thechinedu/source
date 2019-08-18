@@ -10,7 +10,7 @@ posts.find = url => allPosts().find(obj => obj.url === url);
 const allPosts = () => {
   let posts = require.context('../posts', false, /\.md/).keys();
 
-  return posts.map(filePath => {
+  return posts.reverse().map(filePath => {
     const postResolver = new PostResolver(filePath);
 
     return {
