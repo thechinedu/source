@@ -19,6 +19,10 @@
     }
   }
 
+  & a {
+    border-bottom: 3px dashed var(--primary-theme-color);
+  }
+
   & h2 {
     color: var(--primary-theme-color);
     margin-left: auto;
@@ -33,7 +37,12 @@
     width: 80%;
   }
 
-  & code:not([class^=language]) {
+  & p img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  & code:not([class^='language']) {
     background-color: var(--white);
     color: var(--primary-theme-color);
     padding: 0 0.3125rem;

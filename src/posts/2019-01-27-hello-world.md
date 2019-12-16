@@ -2,6 +2,10 @@
 
 Oh, the customary hello world post. “Hello, world” was the first set of words I
 typed in-between html paragraph tags when I started learning to code. I had
+spent the better parts of th...
+
+Oh, the customary hello world post. “Hello, world” was the first set of words I
+typed in-between html paragraph tags when I started learning to code. I had
 spent the better parts of the day manually copying every bit of information I
 could find on w3schools into my notebook (an actual book and not the computer)
 and by evening, I was ready to put all I had written down on paper into practice
