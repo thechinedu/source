@@ -1,3 +1,4 @@
+import ReactDOMServer from 'react-dom/server';
 import PostResolver from '../post-resolver';
 
 describe('post resolver', () => {
@@ -24,14 +25,15 @@ describe('post resolver', () => {
 
   describe('#summary', () => {
     it('returns a substring representing the post summary', () => {
-      expect(post.summary()).toEqual('This is a test file...');
+      const postSummary = ReactDOMServer.renderToStaticMarkup(post.summary());
+
+      expect(postSummary).toEqual('<p>This will be the summary</p>');
     });
   });
 
   describe('#content', () => {
     it('returns the full content of the markdown', () => {
       const wrapper = post.content()[0];
-      const elemType = wrapper.type;
       const content = wrapper.props.children[0];
 
       expect(content).toEqual('This is a test file');
