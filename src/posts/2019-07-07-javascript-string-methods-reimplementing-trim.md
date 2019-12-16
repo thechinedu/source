@@ -2,11 +2,15 @@
 
 The `trim` method removes trailing whitespace from both ends of a given string.
 In this post, we’ll be building out our own version of `trim` that will function
+effectively like the me...
+
+The `trim` method removes trailing whitespace from both ends of a given string.
+In this post, we’ll be building out our own version of `trim` that will function
 effectively like the method provided by the language.
 
 ## Why do this though?
 
-Because it’s fun to learn how things work! (cross my heart)  Also, it’s a cool
+Because it’s fun to learn how things work! (cross my heart) Also, it’s a cool
 little problem solving exercise to help build up our problem solving chops.
 Now that I’ve convinced you that this is a worthwhile use of your time, we can
 get started with the implementation.
@@ -35,23 +39,22 @@ Let’s start with the `trimLeft` function:
 
 ```js
 const trimLeft = str => {
- /*
+  /*
    The res variable is initialized to an empty string.
    This is the new string that we'll be returning.
 
    The shouldMergeChar boolean variable will be used to indicate
    when we can start building our new string.
  */
- let res = "";
- let shouldMergeChar = false;
-
+  let res = "";
+  let shouldMergeChar = false;
 
   /* Just a humble for loop */
   for (let i = 0; i < str.length; i += 1) {
-   // store a reference to the current character in the string
-   let char = str[i];
+    // store a reference to the current character in the string
+    let char = str[i];
 
-   /*
+    /*
      The regex here checks to see if the current character
      is NOT a whitespace character.
 
@@ -60,7 +63,7 @@ const trimLeft = str => {
    */
     if (char.match(/[^\s]/)) shouldMergeChar = true;
 
-   /*
+    /*
      Once the first non-whitespace character has been
      encountered, we can proceed with building our new
      string using the characters from the given string
@@ -72,7 +75,7 @@ const trimLeft = str => {
   return res;
 };
 
-trimLeft("         hello world       ") // "hello world       "
+trimLeft("         hello world       "); // "hello world       "
 ```
 
 The function simply iterates over a given string and starts building a new
@@ -87,27 +90,27 @@ Here’s `trimRight`:
 
 ```js
 const trimRight = str => {
- /*
+  /*
    Same basic logic for the variables here just like in trimLeft
  */
   let res = "";
   let shouldMergeChar = false;
 
- /*
+  /*
     Our humble for loop again but this time iterating
     from the end of the string
   */
-  for (let i = (str.length - 1); i >= 0; i -= 1) {
-   /* store a reference to the current character in the string */
+  for (let i = str.length - 1; i >= 0; i -= 1) {
+    /* store a reference to the current character in the string */
     let char = str[i];
 
-   /*
+    /*
      If the current character is NOT a whitespace character,
      we can proceed with building out the new string
    */
     if (char.match(/[^\s]/)) shouldMergeChar = true;
 
-   /*
+    /*
      Since we are looping from the back, we need a way
      to still build the new string in the correct order.
 
@@ -117,11 +120,11 @@ const trimRight = str => {
     if (shouldMergeChar) res = char + res;
   }
 
- /* It still does what you think it should do */
+  /* It still does what you think it should do */
   return res;
-}
+};
 
-trimRight("       hello world       ") // "       hello world"
+trimRight("       hello world       "); // "       hello world"
 ```
 
 Now that we have both our helper functions to remove trailing whitespace
@@ -132,7 +135,7 @@ the helper functions:
 ```js
 const trim = str => trimRight(trimLeft(str));
 
-trim("       hello world       ") // "hello world"
+trim("       hello world       "); // "hello world"
 ```
 
 What did I tell you? It’s that easy!

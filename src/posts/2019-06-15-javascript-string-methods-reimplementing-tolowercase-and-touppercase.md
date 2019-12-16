@@ -2,7 +2,11 @@
 
 The `toLowerCase` and `toUpperCase` methods in JavaScript are string methods that
 transform a given string, making all of it's characters either lowercase or
-uppercase depending on the method called.  In this post, I'll be discussing how
+uppercase depending on the...
+
+The `toLowerCase` and `toUpperCase` methods in JavaScript are string methods that
+transform a given string, making all of it's characters either lowercase or
+uppercase depending on the method called. In this post, I'll be discussing how
 to implement the functionality of these two methods without directly using the
 methods as provided by the language. Let's get started!
 
@@ -36,7 +40,8 @@ With all of that out of the way, let's see some code shall we?
 
 ```js
 const convertCase = (str, charCase = "lowercase") => {
-  if (charCase !== "lowercase" || charCase !== "uppercase") charCase = "lowercase";
+  if (charCase !== "lowercase" || charCase !== "uppercase")
+    charCase = "lowercase";
 
   let res = "";
   let actions = {
@@ -56,8 +61,7 @@ const convertCase = (str, charCase = "lowercase") => {
   }
 
   return res;
-}
-
+};
 
 const toLowerCase = str => convertCase(str, "lowercase");
 const toUpperCase = str => convertCase(str, "uppercase");

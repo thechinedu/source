@@ -13,23 +13,22 @@ export default () => [
       <title>Chinedu Daniel - Full Stack Developer</title>
     </Helmet>
 
-    <img
-      src={profile}
-      alt="Profile"
-    />
+    <img src={profile} alt="Profile" />
 
     <div className="intro__wrapper">
       <h1>
-        I
-        <span className="highlight"> build </span>
+        I<span className="highlight"> build </span>
         software for the <span className="highlight">web</span>
       </h1>
 
       <p>
         Hi there
-        <span role="img" aria-label="waving hand"> 👋🏾</span>, my name is
-        Chinedu Daniel. I’m a generalist developer building a specialty on
-        the frontend. Welcome to my little space on the web.
+        <span role="img" aria-label="waving hand">
+          {' '}
+          👋🏾
+        </span>
+        , my name is Chinedu Daniel. I’m a generalist developer building a
+        specialty on the frontend. Welcome to my little space on the web.
       </p>
 
       <p>
@@ -40,7 +39,8 @@ export default () => [
           rel="noopener noreferrer"
         >
           FreightHub
-        </a> building
+        </a>{' '}
+        building
         <a
           href="https://ship.freighthub.com"
           target="_blank"
@@ -59,33 +59,28 @@ export default () => [
           rel="noopener noreferrer"
         >
           give back
-        </a> to the open source community.
+        </a>{' '}
+        to the open source community.
       </p>
 
       <Button
         href={'mailto:chinedudaniel7@gmail.com?subject=Hi+Chinedu'}
-        text='Say Hi'
+        text="Say Hi"
       />
     </div>
   </section>,
 
   <section className="recent-posts" key="recent-posts">
-    <h3>
-      Recent Posts
-    </h3>
+    <h3>Recent Posts</h3>
     {posts.page(1).map(({ url, title, date, summary }) => (
       <a href={url} key={url}>
         <article className="card">
           <h2 className="card-header">
             {title}
-            <div className="date">
-              {date}
-            </div>
+            <div className="date">{date}</div>
           </h2>
 
-          <main className="summary">
-            {summary}
-          </main>
+          <main className="summary">{summary}</main>
         </article>
       </a>
     ))}
