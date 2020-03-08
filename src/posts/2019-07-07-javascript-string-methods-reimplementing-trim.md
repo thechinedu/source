@@ -1,4 +1,4 @@
-# Javascript String Methods: Reimplementing trim 💪🏾
+# Javascript String Methods: Re-implementing trim 💪🏾
 
 The `trim` method removes trailing whitespace from both ends of a given string.
 In this post, we’ll be building out our own version of `trim` that will function
