@@ -1,7 +1,0 @@
-.tidbits {
-  & > img {
-    @media (width >= 768px) {
-      width: 530px;
-    }
-  }
-}
