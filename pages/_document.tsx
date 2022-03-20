@@ -12,7 +12,7 @@ export default function Document() {
           crossOrigin="crossorigin"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&display=swap"
           rel="stylesheet"
         />
       </Head>

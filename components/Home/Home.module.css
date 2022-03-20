@@ -1,3 +1,23 @@
+.logo {
+  font-family: "Allan", cursive;
+  font-weight: 700;
+  font-size: var(--medium);
+  color: var(--white);
+  position: relative;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  width: 30%;
+  height: 30%;
+  background: var(--white);
+  border-radius: 100%;
+  font-family: sans-serif;
+  margin-left: 2px;
+}
+
 .navLinksWrapper {
   position: fixed;
   bottom: 0;
@@ -26,6 +46,39 @@
   margin-bottom: var(--spacer-3);
 }
 
-.main p {
+.intro > p:first-of-type {
+  font-family: "Allan", cursive;
+}
+
+@keyframes wavey {
+  0%,
+  100% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+.wave {
+  animation-name: wavey;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  margin-right: var(--spacer-1);
+  display: inline-block;
+}
+
+.intro p {
   margin-bottom: var(--spacer-2);
+}
+
+.intro > a {
+  background-color: var(--white);
+  color: var(--black);
+  padding: var(--spacer-2) var(--spacer-4);
+  display: inline-block;
+  border-radius: 8px;
+  margin-bottom: var(--spacer-2);
+  text-decoration: none;
 }
