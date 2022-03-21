@@ -15,6 +15,11 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&display=swap"
           rel="stylesheet"
         />
+        <script
+          src="https://kit.fontawesome.com/6ed135affd.js"
+          crossOrigin="anonymous"
+          defer
+        ></script>
       </Head>
       <body>
         <Main />

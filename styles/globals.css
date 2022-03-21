@@ -27,6 +27,7 @@
   --gray: #8e8e8e;
   --lighter-gray: #dbdbdb;
   --tomato: #ed4956;
+  --green: #02ff7c;
 
   /* Spacing */
 
@@ -66,7 +67,7 @@ body {
 }
 
 a {
-  font-family: "Allan", cursive;
+  /* font-family: "Allan", cursive; */
   font-weight: 700;
   color: var(--white);
   text-decoration: underline;

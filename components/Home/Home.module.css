@@ -2,8 +2,9 @@
   font-family: "Allan", cursive;
   font-weight: 700;
   font-size: var(--medium);
-  color: var(--white);
+  color: var(--green);
   position: relative;
+  text-decoration: none;
 }
 
 .logo::after {
@@ -12,7 +13,7 @@
   bottom: 5px;
   width: 30%;
   height: 30%;
-  background: var(--white);
+  background: var(--green);
   border-radius: 100%;
   font-family: sans-serif;
   margin-left: 2px;
@@ -23,6 +24,13 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  background-color: var(--green);
+  background-color: var(--black);
+  /* color: var(--black); */
+  border-top: 1px solid var(--green);
+  border-radius: 10px;
+  padding: var(--spacer-2);
+  z-index: 1;
 }
 
 .navLinks {
@@ -30,20 +38,43 @@
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+
+.navLinks a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--black);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.navLinks svg {
+  font-size: var(--medium);
 }
 
 .main {
   margin-top: var(--spacer-8);
 }
 
-.main h1,
-.main h2 {
+.intro h1,
+.intro h2 {
   font-size: var(--larger);
 }
 
-.main h2 {
+.intro h2 {
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.intro h2 {
   margin-bottom: var(--spacer-3);
+}
+
+.intro h2 span {
+  color: var(--green);
 }
 
 .intro > p:first-of-type {
@@ -74,11 +105,34 @@
 }
 
 .intro > a {
-  background-color: var(--white);
+  background-color: var(--green);
   color: var(--black);
   padding: var(--spacer-2) var(--spacer-4);
   display: inline-block;
   border-radius: 8px;
   margin-bottom: var(--spacer-2);
   text-decoration: none;
+}
+
+.recentPosts {
+  margin-top: var(--spacer-6);
+}
+
+.post {
+  margin-bottom: var(--spacer-6);
+  padding: var(--spacer-1);
+}
+
+.post p:first-of-type {
+  font-size: var(--small);
+  opacity: 0.8;
+}
+
+.post p:first-of-type svg {
+  margin-right: var(--spacer-1);
+}
+
+.post h3 {
+  color: var(--green);
+  margin-bottom: var(--spacer-1);
 }

@@ -10,7 +10,7 @@ const Home: FC = () => {
   return (
     <Container>
       <Head>
-        <title>Chinedu Daniel - Software developer</title>
+        <title>Chinedu Daniel - Full Stack Developer</title>
       </Head>
       <nav className={styles.navWrapper}>
         <Link href="/">
@@ -19,10 +19,38 @@ const Home: FC = () => {
 
         <div className={styles.navLinksWrapper}>
           <ul className={styles.navLinks}>
-            <li>Home</li>
-            <li>Writing</li>
-            <li>Labs</li>
-            <li>Tidbits</li>
+            <li>
+              <Link href="/">
+                <a>
+                  <i className="fa-solid fa-house-signal" />
+                  <span>Home</span>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/writing">
+                <a>
+                  <i className="fa-solid fa-pen-clip" />
+                  <span>Writing</span>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/labs">
+                <a>
+                  <i className="fa-solid fa-flask" />
+                  <span>Labs</span>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/tidbits">
+                <a>
+                  <i className="fa-solid fa-cookie-bite" />
+                  <span>Tidbits</span>
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -34,7 +62,9 @@ const Home: FC = () => {
           </p>
 
           <h1>Chinedu Daniel</h1>
-          <h2>I build software for the web</h2>
+          <h2>
+            I <span>build</span> software for the <span>web</span>
+          </h2>
 
           <p>
             I am a software developer with a penchant for building great
@@ -54,9 +84,12 @@ const Home: FC = () => {
           </a>
         </section>
 
-        <section>
-          <div>
-            <p>8th March, 2020</p>
+        <section className={styles.recentPosts}>
+          <div className={styles.post}>
+            <p>
+              <i className="fa-solid fa-calendar-day" />
+              8th March, 2020
+            </p>
             <h3>Reimplementing slice in pure JavaScript</h3>
 
             <p>
@@ -65,8 +98,11 @@ const Home: FC = () => {
               that array…
             </p>
           </div>
-          <div>
-            <p>8th March, 2020</p>
+          <div className={styles.post}>
+            <p>
+              <i className="fa-solid fa-calendar-day" />
+              8th March, 2020
+            </p>
             <h3>Reimplementing slice in pure JavaScript</h3>
 
             <p>
@@ -75,8 +111,11 @@ const Home: FC = () => {
               that array…
             </p>
           </div>
-          <div>
-            <p>8th March, 2020</p>
+          <div className={styles.post}>
+            <p>
+              <i className="fa-solid fa-calendar-day" />
+              8th March, 2020
+            </p>
             <h3>Reimplementing slice in pure JavaScript</h3>
 
             <p>
@@ -85,8 +124,11 @@ const Home: FC = () => {
               that array…
             </p>
           </div>
-          <div>
-            <p>8th March, 2020</p>
+          <div className={styles.post}>
+            <p>
+              <i className="fa-solid fa-calendar-day" />
+              8th March, 2020
+            </p>
             <h3>Reimplementing slice in pure JavaScript</h3>
 
             <p>
@@ -95,8 +137,11 @@ const Home: FC = () => {
               that array…
             </p>
           </div>
-          <div>
-            <p>8th March, 2020</p>
+          <div className={styles.post}>
+            <p>
+              <i className="fa-solid fa-calendar-day" />
+              8th March, 2020
+            </p>
             <h3>Reimplementing slice in pure JavaScript</h3>
 
             <p>
