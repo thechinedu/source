@@ -64,6 +64,21 @@
   font-size: var(--larger);
 }
 
+@media (min-width: 600px) {
+  .intro h1,
+  .intro h2 {
+    font-size: var(--x-large);
+    /* width: 50%; */
+  }
+}
+
+@media (min-width: 900px) {
+  .intro h1,
+  .intro h2 {
+    font-size: var(--xx-large);
+  }
+}
+
 .intro h2 {
   opacity: 0.8;
   font-weight: 500;
@@ -79,6 +94,10 @@
 
 .intro > p:first-of-type {
   font-family: "Allan", cursive;
+}
+
+.intro > p:last-of-type {
+  margin-bottom: var(--spacer-3);
 }
 
 @keyframes wavey {
@@ -102,6 +121,19 @@
 
 .intro p {
   margin-bottom: var(--spacer-2);
+  opacity: 0.8;
+}
+
+@media (min-width: 600px) {
+  .intro p {
+    width: 70%;
+  }
+}
+
+@media (min-width: 900px) {
+  .intro p {
+    width: 50%;
+  }
 }
 
 .intro > a {
@@ -112,6 +144,14 @@
   border-radius: 8px;
   margin-bottom: var(--spacer-2);
   text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .intro > a {
+    width: 30%;
+  }
 }
 
 .recentPosts {

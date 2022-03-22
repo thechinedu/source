@@ -77,6 +77,11 @@ a {
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: var(--green);
+  color: var(--black);
+}
+
 #__next {
   height: 100%;
 }
