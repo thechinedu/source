@@ -85,71 +85,91 @@ const Home: FC = () => {
         </section>
 
         <section className={styles.recentPosts}>
-          <div className={styles.post}>
-            <p>
-              <i className="fa-solid fa-calendar-day" />
-              8th March, 2020
-            </p>
-            <h3>Reimplementing slice in pure JavaScript</h3>
+          <article className={styles.post}>
+            <Link href="/">
+              <a>
+                <p>
+                  <i className="fa-solid fa-calendar-day" />
+                  8th March, 2020
+                </p>
+                <h3>Reimplementing slice in pure JavaScript</h3>
 
-            <p>
-              The slice method in JavaScript is a useful utility method, when it
-              is called on an array, it will return a shallow copy of a part of
-              that array…
-            </p>
-          </div>
-          <div className={styles.post}>
-            <p>
-              <i className="fa-solid fa-calendar-day" />
-              8th March, 2020
-            </p>
-            <h3>Reimplementing slice in pure JavaScript</h3>
+                <p>
+                  The slice method in JavaScript is a useful utility method,
+                  when it is called on an array, it will return a shallow copy
+                  of a part of that array…
+                </p>
+              </a>
+            </Link>
+          </article>
+          <article className={styles.post}>
+            <Link href="/">
+              <a>
+                <p>
+                  <i className="fa-solid fa-calendar-day" />
+                  8th March, 2020
+                </p>
+                <h3>Reimplementing slice in pure JavaScript</h3>
 
-            <p>
-              The slice method in JavaScript is a useful utility method, when it
-              is called on an array, it will return a shallow copy of a part of
-              that array…
-            </p>
-          </div>
-          <div className={styles.post}>
-            <p>
-              <i className="fa-solid fa-calendar-day" />
-              8th March, 2020
-            </p>
-            <h3>Reimplementing slice in pure JavaScript</h3>
+                <p>
+                  The slice method in JavaScript is a useful utility method,
+                  when it is called on an array, it will return a shallow copy
+                  of a part of that array…
+                </p>
+              </a>
+            </Link>
+          </article>
+          <article className={styles.post}>
+            <Link href="/">
+              <a>
+                <p>
+                  <i className="fa-solid fa-calendar-day" />
+                  8th March, 2020
+                </p>
+                <h3>Reimplementing slice in pure JavaScript</h3>
 
-            <p>
-              The slice method in JavaScript is a useful utility method, when it
-              is called on an array, it will return a shallow copy of a part of
-              that array…
-            </p>
-          </div>
-          <div className={styles.post}>
-            <p>
-              <i className="fa-solid fa-calendar-day" />
-              8th March, 2020
-            </p>
-            <h3>Reimplementing slice in pure JavaScript</h3>
+                <p>
+                  The slice method in JavaScript is a useful utility method,
+                  when it is called on an array, it will return a shallow copy
+                  of a part of that array…
+                </p>
+              </a>
+            </Link>
+          </article>
+          <article className={styles.post}>
+            <Link href="/">
+              <a>
+                <p>
+                  <i className="fa-solid fa-calendar-day" />
+                  8th March, 2020
+                </p>
+                <h3>Reimplementing slice in pure JavaScript</h3>
 
-            <p>
-              The slice method in JavaScript is a useful utility method, when it
-              is called on an array, it will return a shallow copy of a part of
-              that array…
-            </p>
-          </div>
-          <div className={styles.post}>
-            <p>
-              <i className="fa-solid fa-calendar-day" />
-              8th March, 2020
-            </p>
-            <h3>Reimplementing slice in pure JavaScript</h3>
+                <p>
+                  The slice method in JavaScript is a useful utility method,
+                  when it is called on an array, it will return a shallow copy
+                  of a part of that array…
+                </p>
+              </a>
+            </Link>
+          </article>
+          <article className={styles.post}>
+            <Link href="/">
+              <a>
+                <p>
+                  <i className="fa-solid fa-calendar-day" />
+                  8th March, 2020
+                </p>
+                <h3>Reimplementing slice in pure JavaScript</h3>
 
-            <p>
-              The slice method in JavaScript is a useful utility method, when it
-              is called on an array, it will return a shallow copy of a part of
-              that array…
-            </p>
-          </div>
+                <p>
+                  The slice method in JavaScript is a useful utility method,
+                  when it is called on an array, it will return a shallow copy
+                  of a part of that array…
+                </p>
+              </a>
+            </Link>
+          </article>
         </section>
       </main>
     </Container>

@@ -1,3 +1,10 @@
+@media (min-width: 900px) {
+  .navWrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .logo {
   font-family: "Allan", cursive;
   font-weight: 700;
@@ -19,18 +26,30 @@
   margin-left: 2px;
 }
 
+@media (min-width: 900px) {
+  .logo {
+    margin-right: auto;
+  }
+}
+
 .navLinksWrapper {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: var(--green);
   background-color: var(--black);
-  /* color: var(--black); */
   border-top: 1px solid var(--green);
   border-radius: 10px;
   padding: var(--spacer-2);
   z-index: 1;
+}
+
+@media (min-width: 900px) {
+  .navLinksWrapper {
+    position: static;
+    width: fit-content;
+    border: 0;
+  }
 }
 
 .navLinks {
@@ -41,18 +60,30 @@
   justify-content: space-around;
 }
 
+@media (min-width: 900px) {
+  .navLinks {
+    gap: var(--spacer-6);
+  }
+}
+
 .navLinks a {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: var(--black);
   color: var(--white);
   font-weight: 700;
 }
 
 .navLinks svg {
   font-size: var(--medium);
+  margin-bottom: var(--spacer-1);
+}
+
+@media (min-width: 900px) {
+  .navLinks svg {
+    margin-bottom: var(--spacer-2);
+  }
 }
 
 .main {
@@ -158,9 +189,35 @@
   margin-top: var(--spacer-6);
 }
 
+@media (min-width: 600px) {
+  .recentPosts {
+    max-width: 580px;
+  }
+}
+
+@media (min-width: 900px) {
+  .recentPosts {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    gap: var(--spacer-2);
+  }
+}
+
 .post {
   margin-bottom: var(--spacer-6);
   padding: var(--spacer-1);
+}
+
+@media (min-width: 900px) {
+  .post {
+    flex-basis: 30%;
+    margin-bottom: unset;
+  }
+}
+
+.post a {
+  text-decoration: none;
 }
 
 .post p:first-of-type {
