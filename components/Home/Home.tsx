@@ -19,7 +19,7 @@ const Home: FC = () => {
 
         <div className={styles.navLinksWrapper}>
           <ul className={styles.navLinks}>
-            <li>
+            <li className={styles.activeLink}>
               <Link href="/">
                 <a>
                   <i className="fa-solid fa-house-signal" />
