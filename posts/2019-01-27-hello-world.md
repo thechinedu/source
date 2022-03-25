@@ -1,10 +1,7 @@
 ---
-title: 'Hello World 🎉'
+title: 'Hello World'
 date: '2019-01-27'
 ---
-
-
-# Hello World 🎉
 
 Oh, the customary hello world post. “Hello, world” was the first set of words I
 typed in-between html paragraph tags when I started learning to code. I had

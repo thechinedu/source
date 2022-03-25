@@ -49,10 +49,6 @@
   --spacer-10: calc(var(--space-scale) * 10);
   --spacer-11: calc(var(--space-scale) * 11);
   --spacer-12: calc(var(--space-scale) * 12);
-
-  /* Icons */
-
-  /* Buttons */
 }
 
 html,

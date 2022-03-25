@@ -1,42 +1,24 @@
-import styles from "./Home.module.css";
+import styles from "@components/Home/Home.module.css";
 
 import Head from "next/head";
 import Link from "next/link";
 import { FC } from "react";
 
-const Home: FC = () => {
+const Labs: FC = () => {
   return (
     <>
       <Head>
-        <title>Chinedu Daniel - Full Stack Developer | Home</title>
+        <title>Chinedu Daniel - Full Stack Developer | Labs</title>
       </Head>
+
       <main className={styles.main}>
         <section className={styles.intro}>
-          <p>
-            Psst <span className={styles.wave}>👋🏾</span>my name is
-          </p>
-
-          <h1>Chinedu Daniel</h1>
-          <h2>
-            I <span>build</span> software for the <span>web</span>
-          </h2>
+          <h1>Labs</h1>
 
           <p>
-            I am a software developer with a penchant for building great
-            experiences on the web. Welcome to my own slice of the internet.
+            Welcome to the lab. Herein lies my projects, experiments and
+            whatnot. Have a look around, you might see something you like.
           </p>
-
-          <p>
-            I currently work at{" "}
-            <a href="https://forto.com" target="_blank" rel="noreferrer">
-              Forto
-            </a>{" "}
-            building useful products for humans.
-          </p>
-
-          <a href="mailto:chinedudaniel7@gmail.com?subject=Hi+Chinedu">
-            Say Hi
-          </a>
         </section>
 
         <section className={styles.recentPosts}>
@@ -131,4 +113,4 @@ const Home: FC = () => {
   );
 };
 
-export default Home;
+export default Labs;
