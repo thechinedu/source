@@ -1,4 +1,4 @@
-import styles from "@components/Home/Home.module.css";
+import styles from "./Writing.module.css";
 
 import Head from "next/head";
 import Link from "next/link";
@@ -8,7 +8,7 @@ const Writing: FC = () => {
   return (
     <>
       <Head>
-        <title>Chinedu Daniel - Full Stack Developer | Writing</title>
+        <title>Writing | Chinedu Daniel - Full Stack Developer</title>
       </Head>
 
       <main className={styles.main}>

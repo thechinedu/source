@@ -1,14 +1,15 @@
-import styles from "@components/Home/Home.module.css";
+import styles from "./Labs.module.css";
 
+import TSIcon from "@components/Icons/TS";
 import Head from "next/head";
-import Link from "next/link";
+// import Link from "next/link";
 import { FC } from "react";
 
 const Labs: FC = () => {
   return (
     <>
       <Head>
-        <title>Chinedu Daniel - Full Stack Developer | Labs</title>
+        <title>Labs | Chinedu Daniel - Full Stack Developer</title>
       </Head>
 
       <main className={styles.main}>
@@ -21,91 +22,43 @@ const Labs: FC = () => {
           </p>
         </section>
 
-        <section className={styles.recentPosts}>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
+        <section className={styles.labs}>
+          <article className={styles.lab}>
+            <a
+              href="https://github.com/thechinedu/prisma-prime"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>
+                <TSIcon />
+              </p>
+              <h3>
+                <i className="fa-solid fa-vial-virus" />
+                Prisma Prime
+              </h3>
 
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
+              <p>Schema definition for Prisma in JavaScript/TypeScript.</p>
+            </a>
           </article>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
+          <article className={styles.lab}>
+            <a
+              href="https://github.com/thechinedu/prisma-prime"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>
+                <i className="fa-brands fa-js" />
+              </p>
+              <h3>
+                <i className="fa-solid fa-vial-virus" />
+                Overhaul
+              </h3>
 
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
-
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
-
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
-
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
+              <p>
+                Chrome extension that gives a new look and feel to
+                Nairaland&apos;s desktop site.
+              </p>
+            </a>
           </article>
         </section>
       </main>

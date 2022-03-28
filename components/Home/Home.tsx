@@ -4,11 +4,24 @@ import Head from "next/head";
 import Link from "next/link";
 import { FC } from "react";
 
-const Home: FC = () => {
+// TODO: type definition is duplicated. Move to a shared directory
+type PostData = {
+  id: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  url: string;
+};
+
+type HomeProps = {
+  posts: PostData[];
+};
+
+const Home: FC<HomeProps> = ({ posts }) => {
   return (
     <>
       <Head>
-        <title>Chinedu Daniel - Full Stack Developer | Home</title>
+        <title>Chinedu Daniel - Full Stack Developer</title>
       </Head>
       <main className={styles.main}>
         <section className={styles.intro}>
@@ -40,91 +53,21 @@ const Home: FC = () => {
         </section>
 
         <section className={styles.recentPosts}>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
+          {posts.map(({ id, title, date, excerpt, url }) => (
+            <article key={id} className={styles.post}>
+              <Link href={url}>
+                <a>
+                  <p>
+                    <i className="fa-solid fa-calendar-day" />
+                    {date}
+                  </p>
+                  <h3>{title}</h3>
 
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
-
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
-
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
-
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
-
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
+                  <p>{excerpt}</p>
+                </a>
+              </Link>
+            </article>
+          ))}
         </section>
       </main>
     </>

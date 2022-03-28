@@ -1,0 +1,23 @@
+.main {
+  composes: main from "@components/Home/Home.module.css";
+}
+
+.intro {
+  composes: intro from "@components/Home/Home.module.css";
+}
+
+.labs {
+  composes: recentPosts from "@components/Home/Home.module.css";
+}
+
+.lab {
+  composes: post from "@components/Home/Home.module.css";
+}
+
+.lab p:first-of-type {
+  font-size: unset;
+}
+
+.lab svg {
+  margin-right: var(--spacer-1);
+}

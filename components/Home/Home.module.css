@@ -1,5 +1,10 @@
 .main {
   margin-top: var(--spacer-8);
+  margin-bottom: calc(var(--spacer-12) * 2);
+
+  @media (min-width: 900px) {
+    margin-bottom: var(--spacer-12);
+  }
 }
 
 .intro h1,

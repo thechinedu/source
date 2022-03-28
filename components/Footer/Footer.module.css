@@ -1,0 +1,32 @@
+.footer {
+  background-color: var(--black);
+  border-top: 1px solid;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  padding: var(--spacer-1);
+  z-index: 2;
+}
+
+.footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer a {
+  font-size: var(--medium);
+  margin-right: var(--spacer-2);
+}
+
+.pipe {
+  margin-right: var(--spacer-1);
+  border: 2px solid;
+  border-radius: 5px;
+  height: 20px;
+}
+
+.info {
+  font-size: var(--small);
+}

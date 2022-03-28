@@ -1,3 +1,3 @@
 # Source
 
-Source code for my little corner of the web.
+Source code for my personal space on the web.
