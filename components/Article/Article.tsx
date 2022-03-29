@@ -1,25 +1,30 @@
 import styles from "./Article.module.css";
 
+import { format } from "@utils/date";
 import Head from "next/head";
 import { FC } from "react";
 import Markdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 type ArticleProps = {
-  post: any; // TODO: add proper type information
+  post: {
+    title: string;
+    date: string;
+    content: string;
+  };
 };
 
-const Article: FC<ArticleProps> = ({ post }: any) => {
+const Article: FC<ArticleProps> = ({ post: { title, date, content } }) => {
   return (
     <>
       <Head>
-        <title>{post.title} | Chinedu Daniel - Full Stack Developer</title>
+        <title>{title} | Chinedu Daniel - Full Stack Developer</title>
       </Head>
       <article className={styles.article}>
         <header>
-          <h1>{post.title}</h1>
-          <span>{post.date}</span>
+          <h1>{title}</h1>
+          <span>{format(date)}</span>
         </header>
 
         <main>
@@ -47,7 +52,7 @@ const Article: FC<ArticleProps> = ({ post }: any) => {
               },
             }}
           >
-            {post.content}
+            {content}
           </Markdown>
         </main>
       </article>

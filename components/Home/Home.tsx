@@ -1,11 +1,11 @@
 import styles from "./Home.module.css";
 
+import { format } from "@utils/date";
 import Head from "next/head";
 import Link from "next/link";
 import { FC } from "react";
 
-// TODO: type definition is duplicated. Move to a shared directory
-type PostData = {
+export type Post = {
   id: string;
   title: string;
   date: string;
@@ -14,7 +14,7 @@ type PostData = {
 };
 
 type HomeProps = {
-  posts: PostData[];
+  posts: Post[];
 };
 
 const Home: FC<HomeProps> = ({ posts }) => {
@@ -59,7 +59,7 @@ const Home: FC<HomeProps> = ({ posts }) => {
                 <a>
                   <p>
                     <i className="fa-solid fa-calendar-day" />
-                    {date}
+                    {format(date)}
                   </p>
                   <h3>{title}</h3>
 

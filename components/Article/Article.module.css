@@ -1,5 +1,14 @@
 .article {
   composes: main from "@components/Home/Home.module.css";
+
+  @media (min-width: 600px) {
+    width: 580px;
+    margin-inline: auto;
+  }
+}
+
+.article img {
+  margin: 0 auto;
 }
 
 .article code:not(pre code) {
@@ -24,4 +33,17 @@
 
 .article header h1 {
   font-size: var(--large);
+
+  @media (min-width: 600px) {
+    font-size: var(--x-large);
+  }
+}
+
+.article h2 {
+  margin-bottom: var(--spacer-4);
+  font-size: var(--medium);
+
+  @media (min-width: 600px) {
+    font-size: var(--large);
+  }
 }
