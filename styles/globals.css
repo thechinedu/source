@@ -59,8 +59,8 @@ body {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: var(--base-font-size);
   background-color: var(--black);
   color: var(--white);

@@ -6,8 +6,6 @@
 }
 
 .logo {
-  /* font-family: "Allan", cursive; */
-  /* font-family: "Roboto Condensed", sans-serif; */
   font-weight: 700;
   font-size: var(--medium);
   color: var(--green);
