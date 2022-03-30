@@ -1,6 +1,14 @@
-import Tidbits from "@components/Tidbits";
-import type { NextPage } from "next";
+import { getSortedPostsData } from "@utils/posts";
+import path from "path";
 
-const TidbitsPage: NextPage = () => <Tidbits />;
+export const getStaticProps = async () => {
+  const tidbitsDirectory = path.join(process.cwd(), "tidbits");
+  const bits = getSortedPostsData(tidbitsDirectory);
+  return {
+    props: {
+      bits,
+    },
+  };
+};
 
-export default TidbitsPage;
+export { default } from "@components/Tidbits";

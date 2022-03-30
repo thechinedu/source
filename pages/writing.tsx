@@ -1,22 +1,12 @@
-import Writing, { Post } from "@components/Writing";
 import { getSortedPostsData } from "@utils/posts";
-import type { NextPage } from "next";
-
-type WritingPageProps = {
-  allPostsData: Post[];
-};
-
-const WritingPage: NextPage<WritingPageProps> = ({ allPostsData }) => (
-  <Writing posts={allPostsData} />
-);
 
 export const getStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
+  const posts = getSortedPostsData();
   return {
     props: {
-      allPostsData,
+      posts,
     },
   };
 };
 
-export default WritingPage;
+export { default } from "@components/Writing";

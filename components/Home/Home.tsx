@@ -6,7 +6,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { FC } from "react";
 
-type HomeProps = {
+export type HomeProps = {
   posts: Post[];
 };
 

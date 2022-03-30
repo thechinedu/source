@@ -11,15 +11,15 @@ type PostFrontMatter = {
 const postsDirectory = path.join(process.cwd(), "posts");
 
 // https://nextjs.org/learn/basics/data-fetching/implement-getstaticprops
-export const getSortedPostsData = () => {
+export const getSortedPostsData = (dir = postsDirectory) => {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(dir);
   const allPostsData = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
 
     // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
+    const fullPath = path.join(dir, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     // Use gray-matter to parse the post metadata section
