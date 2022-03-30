@@ -1,17 +1,10 @@
 import styles from "./Home.module.css";
 
+import { Post } from "@components/Writing";
 import { format } from "@utils/date";
 import Head from "next/head";
 import Link from "next/link";
 import { FC } from "react";
-
-export type Post = {
-  id: string;
-  title: string;
-  date: string;
-  excerpt: string;
-  url: string;
-};
 
 type HomeProps = {
   posts: Post[];
@@ -44,7 +37,11 @@ const Home: FC<HomeProps> = ({ posts }) => {
             <a href="https://forto.com" target="_blank" rel="noreferrer">
               Forto
             </a>{" "}
-            building useful products for humans.
+            where I build{" "}
+            <a href="https://tms.forto.com" target="_blank" rel="noreferrer">
+              useful products
+            </a>{" "}
+            for humans.
           </p>
 
           <a href="mailto:chinedudaniel7@gmail.com?subject=Hi+Chinedu">

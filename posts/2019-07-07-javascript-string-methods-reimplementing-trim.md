@@ -3,8 +3,8 @@ title: 'Javascript String Methods: Re-implementing trim'
 date: '2019-07-07'
 ---
 
-The `trim` method removes trailing whitespace from both ends of a given string.
-In this post, we’ll be building out our own version of `trim` that will function
+The trim method removes trailing whitespace from both ends of a given string.
+In this post, we’ll be building out our own version of trim that will function
 effectively like the me...
 ---
 

@@ -5,6 +5,10 @@
     width: 580px;
     margin-inline: auto;
   }
+
+  @media (min-width: 900px) {
+    width: 650px;
+  }
 }
 
 .article img {

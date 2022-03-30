@@ -1,4 +1,5 @@
-import Home, { Post } from "@components/Home";
+import Home from "@components/Home";
+import { Post } from "@components/Writing";
 import { getSortedPostsData } from "@utils/posts";
 import type { NextPage } from "next";
 

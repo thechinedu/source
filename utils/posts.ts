@@ -67,19 +67,18 @@ export function getAllPostPaths() {
 }
 
 // https://nextjs.org/learn/basics/dynamic-routes/implement-getstaticprops
-export const getPostData = (pathSegments: string[]) => {
+export const getPostData = (
+  pathSegments: string[]
+): Omit<PostFrontMatter, "excerpt"> & { content: string } => {
   const fullPath = path.join(postsDirectory, `${pathSegments.join("-")}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents, { excerpt: true });
+  const matterResult = matter(fileContents);
   const content = getMarkdownContent(matterResult.content);
-  // console.log(matterResult);
 
-  // Combine the data with the id
   return {
-    pathSegments,
-    ...matterResult.data,
+    ...(matterResult.data as PostFrontMatter),
     content,
   };
 };

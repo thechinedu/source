@@ -3,7 +3,7 @@ title: 'Javascript Array Methods: Re-implementing Slice'
 date: '2020-03-08'
 ---
 
-The `slice` method in JavaScript is a useful utility method, when it is called on an
+The slice method in JavaScript is a useful utility method, when it is called on an
 array, it will return a shallow copy of a part of that array...
 ---
 

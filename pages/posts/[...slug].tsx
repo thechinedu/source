@@ -1,4 +1,5 @@
 import Article from "@components/Article";
+import type { ArticleProps as PostProps, PostData } from "@components/Article";
 import { getAllPostPaths, getPostData } from "@utils/posts";
 import type { NextPage } from "next";
 
@@ -10,8 +11,7 @@ type PathProps = {
   };
 };
 
-// TODO: Add proper type for postData
-const Post: NextPage = ({ postData }: any) => <Article post={postData} />;
+const Post: NextPage<PostProps> = ({ post }) => <Article post={post} />;
 
 export const getStaticPaths = async () => {
   const paths = getAllPostPaths();
@@ -23,10 +23,10 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }: PathProps) => {
-  const postData = getPostData(params.slug);
+  const post: PostData = getPostData(params.slug);
   return {
     props: {
-      postData,
+      post,
     },
   };
 };

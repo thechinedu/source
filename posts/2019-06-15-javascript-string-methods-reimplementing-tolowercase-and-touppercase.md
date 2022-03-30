@@ -3,7 +3,7 @@ title: 'Javascript String Methods: Re-implementing toLowerCase and toUpperCase'
 date: '2019-06-15'
 ---
 
-The `toLowerCase` and `toUpperCase` methods in JavaScript are string methods that
+The toLowerCase and toUpperCase methods in JavaScript are string methods that
 transform a given string, making all of it's characters either lowercase or
 uppercase depending on the...
 ---

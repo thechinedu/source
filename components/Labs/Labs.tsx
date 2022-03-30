@@ -2,7 +2,6 @@ import styles from "./Labs.module.css";
 
 import TSIcon from "@components/Icons/TS";
 import Head from "next/head";
-// import Link from "next/link";
 import { FC } from "react";
 
 const Labs: FC = () => {

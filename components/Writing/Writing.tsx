@@ -1,10 +1,23 @@
 import styles from "./Writing.module.css";
 
+import { format } from "@utils/date";
 import Head from "next/head";
 import Link from "next/link";
 import { FC } from "react";
 
-const Writing: FC = () => {
+export type Post = {
+  id: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  url: string;
+};
+
+type WritingProps = {
+  posts: Post[];
+};
+
+const Writing: FC<WritingProps> = ({ posts }) => {
   return (
     <>
       <Head>
@@ -23,91 +36,21 @@ const Writing: FC = () => {
         </section>
 
         <section className={styles.recentPosts}>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
+          {posts.map(({ id, title, date, excerpt, url }) => (
+            <article key={id} className={styles.post}>
+              <Link href={url}>
+                <a>
+                  <p>
+                    <i className="fa-solid fa-calendar-day" />
+                    {format(date)}
+                  </p>
+                  <h3>{title}</h3>
 
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
-
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
-
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
-
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
-          <article className={styles.post}>
-            <Link href="/">
-              <a>
-                <p>
-                  <i className="fa-solid fa-calendar-day" />
-                  8th March, 2020
-                </p>
-                <h3>Reimplementing slice in pure JavaScript</h3>
-
-                <p>
-                  The slice method in JavaScript is a useful utility method,
-                  when it is called on an array, it will return a shallow copy
-                  of a part of that array…
-                </p>
-              </a>
-            </Link>
-          </article>
+                  <p>{excerpt}</p>
+                </a>
+              </Link>
+            </article>
+          ))}
         </section>
       </main>
     </>

@@ -7,12 +7,14 @@ import Markdown from "react-markdown";
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
+export type PostData = {
+  title: string;
+  date: string;
+  content: string;
+};
+
 export type ArticleProps = {
-  post: {
-    title: string;
-    date: string;
-    content: string;
-  };
+  post: PostData;
 };
 
 const Article: FC<ArticleProps> = ({ post: { title, date, content } }) => {
