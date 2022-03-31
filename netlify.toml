@@ -46,10 +46,10 @@
 # Branch Deploy context: all deploys that are not from
 # a pull/merge request or from the Production branch 
 # will inherit these settings.
-[context.branch-deploy]
+# [context.branch-deploy]
+#   publish = "dist/"
+[context.branch-deploy.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
-# [context.branch-deploy.environment]
-#   NODE_ENV = "development"
 
 # Specific branch context: all deploys from 
 # this specific branch will inherit these settings.
