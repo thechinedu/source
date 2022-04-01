@@ -13,3 +13,7 @@
 .post {
   composes: post from "@components/Home/Home.module.css";
 }
+
+.post a {
+  text-decoration: underline;
+}

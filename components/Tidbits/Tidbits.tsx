@@ -1,5 +1,7 @@
 import styles from "./Tidbits.module.css";
 
+import Markdown from "@components/Markdown";
+import { format } from "@utils/date";
 import Head from "next/head";
 import { FC } from "react";
 
@@ -31,11 +33,11 @@ const Tidbits: FC<TidbitsProps> = ({ bits }) => {
             <article key={id} className={styles.post}>
               <p>
                 <i className="fa-solid fa-calendar-day" />
-                {date}
+                {format(date)}
               </p>
               <h3>{title}</h3>
 
-              <p>{excerpt}</p>
+              <Markdown content={excerpt} />
             </article>
           ))}
         </section>
