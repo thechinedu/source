@@ -34,11 +34,15 @@ const Home: FC<HomeProps> = ({ posts }) => {
 
           <p>
             I currently work at{" "}
-            <a href="https://forto.com" target="_blank" rel="noreferrer">
-              Forto
+            <a href="https://leanix.net" target="_blank" rel="noreferrer">
+              SAP LeanIX
             </a>{" "}
             where I build{" "}
-            <a href="https://tms.forto.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.leanix.net/en/enterprise-architecture/features"
+              target="_blank"
+              rel="noreferrer"
+            >
               useful products
             </a>{" "}
             for humans.
@@ -52,16 +56,14 @@ const Home: FC<HomeProps> = ({ posts }) => {
         <section className={styles.recentPosts}>
           {posts.map(({ id, title, date, excerpt, url }) => (
             <article key={id} className={styles.post}>
-              <Link href={url}>
-                <a>
-                  <p>
-                    <i className="fa-solid fa-calendar-day" />
-                    {format(date)}
-                  </p>
-                  <h3>{title}</h3>
+              <Link href={url} passHref>
+                <p>
+                  <i className="fa-solid fa-calendar-day" />
+                  {format(date)}
+                </p>
+                <h3>{title}</h3>
 
-                  <p>{excerpt}</p>
-                </a>
+                <p>{excerpt}</p>
               </Link>
             </article>
           ))}

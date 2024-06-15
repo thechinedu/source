@@ -36,19 +36,17 @@ const Navbar: FC = () => {
 
   return (
     <nav className={styles.navWrapper}>
-      <Link href="/">
-        <a className={styles.logo}>CD</a>
+      <Link href="/" className={styles.logo}>
+        CD
       </Link>
 
       <div className={styles.navLinksWrapper}>
         <ul className={styles.navLinks}>
           {links(pathname).map(({ href, label, iconName, isActive }) => (
             <li key={label} className={isActive ? styles.activeLink : ""}>
-              <Link href={href}>
-                <a>
-                  <i className={`fa-solid fa-${iconName}`} />
-                  <span>{label}</span>
-                </a>
+              <Link href={href} passHref>
+                <i className={`fa-solid fa-${iconName}`} />
+                <span>{label}</span>
               </Link>
             </li>
           ))}

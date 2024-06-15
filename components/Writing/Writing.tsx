@@ -38,16 +38,14 @@ const Writing: FC<WritingProps> = ({ posts }) => {
         <section className={styles.recentPosts}>
           {posts.map(({ id, title, date, excerpt, url }) => (
             <article key={id} className={styles.post}>
-              <Link href={url}>
-                <a>
-                  <p>
-                    <i className="fa-solid fa-calendar-day" />
-                    {format(date)}
-                  </p>
-                  <h3>{title}</h3>
+              <Link href={url} passHref>
+                <p>
+                  <i className="fa-solid fa-calendar-day" />
+                  {format(date)}
+                </p>
+                <h3>{title}</h3>
 
-                  <p>{excerpt}</p>
-                </a>
+                <p>{excerpt}</p>
               </Link>
             </article>
           ))}
