@@ -1,11 +1,12 @@
-import styles from "./Tidbits.module.css";
-
-import Markdown from "@components/Markdown";
-import { format } from "@utils/date";
 import Head from "next/head";
 import { FC } from "react";
 
-import type { Post } from "@components/Writing";
+import { CalendarDay } from "@/components/Icons";
+import Markdown from "@/components/Markdown";
+import type { Post } from "@/components/Writing";
+import { format } from "@/utils/date";
+
+import styles from "./Tidbits.module.css";
 
 export type TidbitsProps = {
   bits: Post[];
@@ -32,7 +33,7 @@ const Tidbits: FC<TidbitsProps> = ({ bits }) => {
           {bits.map(({ id, title, date, excerpt }) => (
             <article key={id} className={styles.post}>
               <p>
-                <i className="fa-solid fa-calendar-day" />
+                <CalendarDay />
                 {format(date)}
               </p>
               <h3>{title}</h3>

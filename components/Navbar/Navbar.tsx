@@ -1,32 +1,34 @@
-import styles from "./Navbar.module.css";
-
 import Link from "next/link";
-import { FC } from "react";
 import { useRouter } from "next/router";
+import { FC } from "react";
+
+import { CookieBite, Flask, Home, PenClip } from "@/components/Icons";
+
+import styles from "./Navbar.module.css";
 
 const links = (pathName: string) => [
   {
     href: "/",
     label: "Home",
-    iconName: "house-signal",
+    icon: <Home />,
     isActive: pathName === "/",
   },
   {
     href: "/writing",
     label: "Writing",
-    iconName: "pen-clip",
+    icon: <PenClip />,
     isActive: pathName === "/writing",
   },
   {
     href: "/labs",
     label: "Labs",
-    iconName: "flask",
+    icon: <Flask />,
     isActive: pathName === "/labs",
   },
   {
     href: "/tidbits",
     label: "Tidbits",
-    iconName: "cookie-bite",
+    icon: <CookieBite />,
     isActive: pathName === "/tidbits",
   },
 ];
@@ -42,10 +44,10 @@ const Navbar: FC = () => {
 
       <div className={styles.navLinksWrapper}>
         <ul className={styles.navLinks}>
-          {links(pathname).map(({ href, label, iconName, isActive }) => (
+          {links(pathname).map(({ href, label, icon, isActive }) => (
             <li key={label} className={isActive ? styles.activeLink : ""}>
               <Link href={href} passHref>
-                <i className={`fa-solid fa-${iconName}`} />
+                {icon}
                 <span>{label}</span>
               </Link>
             </li>

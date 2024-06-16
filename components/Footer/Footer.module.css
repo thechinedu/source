@@ -20,6 +20,12 @@
   margin-right: var(--spacer-2);
 }
 
+.footer svg {
+  fill: var(--white);
+  height: 18px;
+  width: 18px;
+}
+
 .pipe {
   margin-right: var(--spacer-1);
   border: 2px solid;

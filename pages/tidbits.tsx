@@ -1,5 +1,6 @@
-import { getSortedPostsData } from "@utils/posts";
 import path from "path";
+
+import { getSortedPostsData } from "@/utils/posts";
 
 export const getStaticProps = async () => {
   const tidbitsDirectory = path.join(process.cwd(), "tidbits");
@@ -11,4 +12,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export { default } from "@components/Tidbits";
+export { default } from "@/components/Tidbits";

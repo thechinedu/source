@@ -102,8 +102,11 @@
 }
 
 .navLinks svg {
+  fill: var(--white);
   font-size: var(--medium);
+  height: 22px;
   margin-bottom: var(--spacer-1);
+  width: 22px;
 
   @media (min-width: 900px) {
     margin-bottom: var(--spacer-2);

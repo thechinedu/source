@@ -1,5 +1,5 @@
 .article {
-  composes: main from "@components/Home/Home.module.css";
+  composes: main from "@/components/Home/Home.module.css";
 
   @media (min-width: 600px) {
     width: 580px;
