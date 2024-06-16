@@ -1,9 +1,10 @@
-import styles from "./Article.module.css";
-
-import Markdown from "@components/Markdown";
-import { format } from "@utils/date";
 import Head from "next/head";
 import { FC } from "react";
+
+import Markdown from "@/components/Markdown";
+import { format } from "@/utils/date";
+
+import styles from "./Article.module.css";
 
 export type PostData = {
   title: string;

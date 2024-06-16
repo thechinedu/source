@@ -1,4 +1,4 @@
-import { getSortedPostsData } from "@utils/posts";
+import { getSortedPostsData } from "@/utils/posts";
 
 export const getStaticProps = async () => {
   const posts = getSortedPostsData();
@@ -9,4 +9,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export { default } from "@components/Writing";
+export { default } from "@/components/Writing";

@@ -1,7 +1,13 @@
 import { FC } from "react";
 import ReactMarkdown from "react-markdown";
-import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import {
+  PrismAsyncLight,
+  SyntaxHighlighterProps,
+} from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
+const SyntaxHighlighter =
+  PrismAsyncLight as unknown as FC<SyntaxHighlighterProps>;
 
 type MarkdownProps = {
   content: string;
@@ -15,7 +21,8 @@ const Markdown: FC<MarkdownProps> = ({ content }) => (
         const match = /language-(\w+)/.exec(className || "");
         return !inline && match ? (
           <SyntaxHighlighter
-            style={vscDarkPlus}
+            // TODO: fix issue leading to usage of any
+            style={vscDarkPlus as any}
             language={match[1]}
             PreTag="div"
             showLineNumbers

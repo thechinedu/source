@@ -1,9 +1,11 @@
-import styles from "./Writing.module.css";
-
-import { format } from "@utils/date";
 import Head from "next/head";
 import Link from "next/link";
 import { FC } from "react";
+
+import { format } from "@/utils/date";
+
+import { CalendarDay } from "../Icons";
+import styles from "./Writing.module.css";
 
 export type Post = {
   id: string;
@@ -40,7 +42,7 @@ const Writing: FC<WritingProps> = ({ posts }) => {
             <article key={id} className={styles.post}>
               <Link href={url} passHref>
                 <p>
-                  <i className="fa-solid fa-calendar-day" />
+                  <CalendarDay />
                   {format(date)}
                 </p>
                 <h3>{title}</h3>

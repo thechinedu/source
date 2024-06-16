@@ -1,11 +1,11 @@
 import "modern-css-reset";
-import "@styles/globals.css";
-
-import Container from "@components/Container";
-import Navbar from "@components/Navbar";
-import Footer from "@components/Footer";
+import "@/styles/globals.css";
 
 import type { AppProps } from "next/app";
+
+import Container from "@/components/Container";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

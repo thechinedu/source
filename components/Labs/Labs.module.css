@@ -1,17 +1,17 @@
 .main {
-  composes: main from "@components/Home/Home.module.css";
+  composes: main from "@/components/Home/Home.module.css";
 }
 
 .intro {
-  composes: intro from "@components/Home/Home.module.css";
+  composes: intro from "@/components/Home/Home.module.css";
 }
 
 .labs {
-  composes: recentPosts from "@components/Home/Home.module.css";
+  composes: recentPosts from "@/components/Home/Home.module.css";
 }
 
 .lab {
-  composes: post from "@components/Home/Home.module.css";
+  composes: post from "@/components/Home/Home.module.css";
 }
 
 .lab p:first-of-type {
@@ -20,4 +20,10 @@
 
 .lab svg {
   margin-right: var(--spacer-1);
+}
+
+.lab .tagIcon {
+  fill: var(--green);
+  height: 18px;
+  width: 18px;
 }

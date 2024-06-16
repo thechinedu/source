@@ -1,7 +1,8 @@
-import Article from "@components/Article";
-import type { ArticleProps as PostProps, PostData } from "@components/Article";
-import { getAllPostPaths, getPostData } from "@utils/posts";
 import type { NextPage } from "next";
+
+import type { ArticleProps as PostProps, PostData } from "@/components/Article";
+import Article from "@/components/Article";
+import { getAllPostPaths, getPostData } from "@/utils/posts";
 
 type PathProps = {
   params: {

@@ -18,9 +18,12 @@
   "devDependencies": {
     "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "@types/react-syntax-highlighter": "^15.5.13",
     "eslint": "8.10.0",
     "eslint-config-next": "^14.2.4",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
     "gray-matter": "^4.0.3",
     "modern-css-reset": "^1.4.0",
     "postcss-flexbugs-fixes": "^5.0.2",

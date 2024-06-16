@@ -1,6 +1,8 @@
-import styles from "./Footer.module.css";
-
 import { FC } from "react";
+
+import { Github, LinkedIn, Twitter } from "@/components/Icons";
+
+import styles from "./Footer.module.css";
 
 const Footer: FC = () => {
   return (
@@ -10,22 +12,25 @@ const Footer: FC = () => {
           href="https://github.com/thechinedu"
           target="_blank"
           rel="noreferrer"
+          aria-label="Github profile"
         >
-          <i className="fa-brands fa-github" />
+          <Github />
         </a>
         <a
           href="https://twitter.com/the_chinedu"
           target="_blank"
           rel="noreferrer"
+          aria-label="Twitter profile"
         >
-          <i className="fa-brands fa-twitter" />
+          <Twitter />
         </a>
         <a
           href="https://linkedin.com/in/danielchinedu"
           target="_blank"
           rel="noreferrer"
+          aria-label="LinkedIn profile"
         >
-          <i className="fa-brands fa-linkedin" />
+          <LinkedIn />
         </a>
         <span className={styles.pipe} />
         <span className={styles.info}>

@@ -1,17 +1,17 @@
 .main {
-  composes: main from "@components/Home/Home.module.css";
+  composes: main from "@/components/Home/Home.module.css";
 }
 
 .intro {
-  composes: intro from "@components/Home/Home.module.css";
+  composes: intro from "@/components/Home/Home.module.css";
 }
 
 .recentPosts {
-  composes: recentPosts from "@components/Home/Home.module.css";
+  composes: recentPosts from "@/components/Home/Home.module.css";
 }
 
 .post {
-  composes: post from "@components/Home/Home.module.css";
+  composes: post from "@/components/Home/Home.module.css";
 }
 
 .post a {

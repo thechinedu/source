@@ -1,8 +1,9 @@
-import styles from "./Labs.module.css";
-
-import TSIcon from "@components/Icons/TS";
 import Head from "next/head";
 import { FC } from "react";
+
+import { JS, Tag, TS } from "@/components/Icons";
+
+import styles from "./Labs.module.css";
 
 const Labs: FC = () => {
   return (
@@ -29,10 +30,10 @@ const Labs: FC = () => {
               rel="noreferrer"
             >
               <p>
-                <TSIcon />
+                <TS />
               </p>
               <h3>
-                <i className="fa-solid fa-vial-virus" />
+                <Tag className={styles.tagIcon} />
                 Prisma Prime
               </h3>
 
@@ -41,15 +42,15 @@ const Labs: FC = () => {
           </article>
           <article className={styles.lab}>
             <a
-              href="https://github.com/thechinedu/prisma-prime"
+              href="https://github.com/thechinedu/overhaul"
               target="_blank"
               rel="noreferrer"
             >
               <p>
-                <i className="fa-brands fa-js" />
+                <JS />
               </p>
               <h3>
-                <i className="fa-solid fa-vial-virus" />
+                <Tag className={styles.tagIcon} />
                 Overhaul
               </h3>
 
