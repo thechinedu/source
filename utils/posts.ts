@@ -1,6 +1,6 @@
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
+import path from "path";
 
 type PostFrontMatter = {
   title: string;
@@ -13,7 +13,7 @@ const postsDirectory = path.join(process.cwd(), "posts");
 // https://nextjs.org/learn/basics/data-fetching/implement-getstaticprops
 export const getSortedPostsData = (dir = postsDirectory) => {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(dir);
+  const fileNames = getNonDraftFiles(dir);
   const allPostsData = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
@@ -41,20 +41,14 @@ export const getSortedPostsData = (dir = postsDirectory) => {
     };
   });
   // Sort posts by date
-  return allPostsData.sort(({ date: a }, { date: b }) => {
-    if (a < b) {
-      return 1;
-    } else if (a > b) {
-      return -1;
-    } else {
-      return 0;
-    }
-  });
+  return allPostsData.sort(
+    ({ date: dateA }, { date: dateB }) => +new Date(dateB) - +new Date(dateA)
+  );
 };
 
 // https://nextjs.org/learn/basics/dynamic-routes/implement-getstaticpaths
 export function getAllPostPaths() {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = getNonDraftFiles(postsDirectory);
 
   return fileNames.map((fileName) => {
     const [year, month, date, ...slug] = fileName.split("-");
@@ -84,3 +78,8 @@ export const getPostData = (
 };
 
 const getMarkdownContent = (content: string) => content.split("---")[1]; // remove excerpt from markdown content
+
+const getNonDraftFiles = (dir: string) => {
+  const fileNames = fs.readdirSync(dir);
+  return fileNames.filter((fileName) => !fileName.startsWith("draft"));
+};
